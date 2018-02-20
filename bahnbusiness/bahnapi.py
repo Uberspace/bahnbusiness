@@ -98,17 +98,30 @@ class BahnApi:
       }
     )
 
-    html = self._get_and_parse(self.JOURNEY_DETAILS,
-      method='POST',
-      data={
-        'button.bahnfahrtAbrufen_p_js': 'true',
-      }
-    )
+    if journey.description == 'BahnCard':
+      html = self._get_and_parse(self.JOURNEY_DETAILS,
+        method='POST',
+        data={
+          'button.kaufbelegAnfordern_p_js': 'true',
+        }
+      )
 
-    try:
-      return html.select('a.btn')[0]['href']
-    except:
-      raise Exception('Could not find ticket URL for {}'.format(journey.id))
+      try:
+        return html.select('a.arrowlink')[0]['href']
+      except:
+        raise Exception('Could not find invoice URL for {}'.format(journey.id))
+    else:
+      html = self._get_and_parse(self.JOURNEY_DETAILS,
+        method='POST',
+        data={
+          'button.bahnfahrtAbrufen_p_js': 'true',
+        }
+      )
+
+      try:
+        return html.select('a.btn')[0]['href']
+      except:
+        raise Exception('Could not find ticket URL for {}'.format(journey.id))
 
   def download_ticket(self, journey):
     """ Get the ticket for the given journey as bytes() """
