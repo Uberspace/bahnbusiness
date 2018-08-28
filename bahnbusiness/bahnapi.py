@@ -115,6 +115,7 @@ class BahnApi:
         method='POST',
         data={
           'button.bahnfahrtAbrufen_p_js': 'true',
+          'button.reservierungabrufen_p_js': 'true',
         }
       )
 
