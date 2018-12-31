@@ -5,7 +5,7 @@ setup(name='bahnbusiness',
       author='uberspace.de',
       author_email='hallo@uberspace.de',
       url='https://github.com/uberspace/bahnbusiness',
-      version='1.2.0',
+      version='1.2.1',
       license='MIT',
       packages=[
         'bahnbusiness',
