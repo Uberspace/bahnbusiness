@@ -38,9 +38,9 @@ $ python setup.py develop
 
 ### Tests
 
-Since this library is highly dependant on the bahn website and provides very
+Since this library is highly dependent on the bahn website and provides very
 little functionality on its own, the provided tests are quite minimal. Also,
-a valid login is needed to execute them. 
+a valid login is needed to execute them.
 
 ### Publishing
 
