@@ -12,7 +12,7 @@ setup(name='bahnbusiness',
       ],
       zip_safe=True,
       install_requires=[
-          'beautifulsoup4==4.6.0',
+          'beautifulsoup4==4.6.3',
           'requests==2.20.*',
       ],
       classifiers=[
