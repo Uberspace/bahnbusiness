@@ -1,5 +1,7 @@
 # BahnBusiness
 
+**Discountinued since bahn.de now requires a captcha for login.**
+
 A library to collect ticket PDFs from bahn.business for bookkeeping purposes.
 
 ## Configuration
